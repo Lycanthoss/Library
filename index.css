@@ -103,16 +103,9 @@ html, body {
     font-size: 1.15rem;
     padding: 0.5em;
 }
-#menu {
-    background-color: var(--navbar-color);
-    outline: none;
-    border: 1px solid var(--border-color);
-}
-#menu:hover {
-    background-color: var(--button-hover);
-}
-#menu:active {
-    background-color: var(--button-click);
+#menu > img {
+    max-width: 50px;
+    max-height: 50px;
 }
 main {
     padding-top: 8rem;
