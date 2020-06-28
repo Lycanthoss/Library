@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/fc1819c339.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="./index.css" rel="stylesheet">
+        <title>Library</title>
+    </head>
+    <body>
+        <div id="fill-form-overlay">
+            <button id="close-overlay"><i class="far fa-window-close"></i></button>
+            <div id="fill-form">
+                <label for="title">Book title: </label>
+                <input id="input-title" name="title" type="text" required>
+                <label for="author">Book author: </label>
+                <input id="input-author" name="author" type="text" required>
+                <label for="pages">Pages: </label>
+                <input id="input-pages" name="pages" type="number" required>
+                <button id="fill-form-button">Submit</button>
+            </div>
+        </div>
+        <nav id="navbar">
+            <div id="nav-left">
+                <button id="menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <main>
+            <h1>Your library</h1>
+            <div id="book-grid">
+                <button id="add-button">Add<i class="far fa-plus-square"></i></button>
+            </div>
+        </main>
+        <script src="./storage.js"></script>
+        <script src="./library.js"></script>
+    </body>
+</html>

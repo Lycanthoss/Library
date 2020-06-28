@@ -1,0 +1,186 @@
+:root {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+
+    --main-background: rgb(226, 226, 226);
+    --navbar-color: rgba(46, 95, 202, 0.63);
+    --overlay-color: rgba(34, 156, 255, 0.705);
+    --search-box-color: rgba(255, 137, 59, 0.801);
+    --border-color: rgb(61, 61, 61);
+    --button-hover: thistle;
+    --button-click: rgb(170, 161, 161);
+    --book-background: rgba(207, 207, 207, 0.76);
+    --green-button: rgb(63, 216, 145);
+    --red-button: rgb(241, 120, 120);
+}
+html, body {
+    margin: 0px;
+    width: 100%;
+    background-color: var(--main-background);
+}
+#fill-form-overlay {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 10;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+    background-color: var(--overlay-color);
+    backdrop-filter: blur(2px);
+
+    transition: 1s;
+}
+#close-overlay {
+    position: absolute;
+    left: auto;
+    bottom: auto;
+    top: 8rem;
+    right: 4rem;
+    border: none;
+    padding: 0rem;
+    background-color: rgba(138, 138, 138, 0.253);
+}
+#close-overlay > i {
+    padding: 0rem;
+    font-size: 2rem;
+}
+#close-overlay > i:hover {
+    color: var(--button-hover);
+}
+#fill-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    border: 3px solid var(--border-color);
+    border-radius: 15px;
+}
+#fill-form > label {
+    font-size: 1.5rem;
+}
+#fill-form > input {
+    padding: 0.5rem 2rem;
+    margin: 1rem 0rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+#fill-form > button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: 1px solid var(--border-color) 10px;
+    background-color: var(--search-box-color);
+    outline: none;
+    transition: 0.5s;
+}
+#fill-form > button:hover {
+    background-color: var(--button-hover);
+    padding: 1rem 4rem;
+}
+#fill-form > button:active {
+    background-color: var(--button-click);
+}
+#navbar {
+    position: fixed;
+    width: 100%;
+
+    padding: 1rem 1.5rem;
+    background-color: var(--navbar-color);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+}
+#nav-left {
+    float: left;
+    padding: 1rem 0rem;
+}
+#navbar i {
+    font-size: 1.15rem;
+    padding: 0.5em;
+}
+#menu {
+    background-color: var(--navbar-color);
+    outline: none;
+    border: 1px solid var(--border-color);
+}
+#menu:hover {
+    background-color: var(--button-hover);
+}
+#menu:active {
+    background-color: var(--button-click);
+}
+main {
+    padding-top: 8rem;
+    margin: 0rem 2rem
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+#book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.book-item {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: var(--book-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+}
+.book-item > h2 {
+    text-align: center;
+    font-style: italic;
+    margin: 0rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--navbar-color);
+}
+.book-item > p {
+    padding-left: 1rem;
+}
+
+#add-button, #add-button > i {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#add-button {
+    padding-left: 1.5rem;
+    max-width: 150px;
+    max-height: 150px;
+    order: 99;
+    background-color: var(--search-box-color);
+    border: 1px solid var(--border-color);
+    justify-self: center;
+    align-self: center;
+}
+#add-button:hover {
+    background-color: var(--button-hover);
+}
+.read-button, .delete-button {
+    outline: none;
+    border: 1px solid var(--button-click);
+    border-radius: 10px;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+.read-button {
+    background-color: var(--green-button);
+}
+.delete-button {
+    background-color: var(--red-button);
+}
+.read-button:hover, .delete-button:hover {
+    border: 1px solid var(--border-color);
+}
